@@ -140,7 +140,7 @@ export default class Card extends React.Component {
           <input type="text"  placeholder={this.state.displayMessage} onChange={this.checkName}   />
           {!valid.status ?  <span style={{color:'#ff0000'}}>{valid.message}</span> : null }
          
-          <input type="text"  placeholder={this.state.cardNumber.displayMessageNumber} onChange={this.checkCardNumber}/>
+          <input type="text" maxLength="16"  placeholder={this.state.cardNumber.displayMessageNumber} onChange={this.checkCardNumber}/>
            {!this.state.cardNumber.statusNum ?  <span style={{color:'#ff0000'}}>{this.state.cardNumber.numberMessage}</span> : null }
         
           <input maxlength='5' type="text" placeholder={this.state.expireDate.displayMessageDate} onChange={this.checkCardDate} onKeyUp={this.formatString} />
